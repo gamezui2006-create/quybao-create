@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thiệp Chúc Mừng 20/10 💐</title>
+<style>
+  body {
+    background: linear-gradient(to right, #ffe6f2, #fff5fa);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: #ff4d88;
+    padding: 50px;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 45px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .message {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+  }
+  .message:nth-child(2) { animation-delay: 2s; }
+  .message:nth-child(3) { animation-delay: 4s; }
+  .message:nth-child(4) { animation-delay: 6s; }
+  .message:nth-child(5) { animation-delay: 8s; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .heart {
+    position: absolute;
+    color: #ff6699;
+    animation: float 5s ease-in-out infinite;
+    opacity: 0.6;
+  }
+  @keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(20deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+</style>
+</head>
+<body>
+
+<h1>💐 Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 💐</h1>
+
+<div class="message">🌸 Gửi đến <b>chị cả</b> — người mạnh mẽ và luôn là tấm gương cho em noi theo.  
+Chúc chị luôn bình an, xinh đẹp và đạt được mọi điều mình mong muốn. Em thương chị nhiều 💕</div>
+
+<div class="message">🌷 Gửi đến <b>chị hai</b> — người luôn quan tâm, lo lắng cho mọi người mà ít khi nghĩ cho bản thân.  
+Chúc chị luôn vui vẻ, hạnh phúc và gặp thật nhiều may mắn trong cuộc sống 🌼</div>
+
+<div class="message">🌹 Cuối cùng là <b>má</b> — người phụ nữ tuyệt vời nhất trên đời.  
+Cảm ơn má vì tất cả yêu thương và hi sinh dành cho tụi con.  
+Chúc má luôn khỏe mạnh, nụ cười luôn nở trên môi, và mãi là chỗ dựa ấm áp nhất của cả nhà ❤️</div>
+
+<div class="message">— Tớ gửi tất cả yêu thương của mình đến ba người phụ nữ quan trọng nhất đời tớ 💌 —</div>
+
+<script>
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '💖';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.top = Math.random() * 100 + 'vh';
+    heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+    document.body.appendChild(heart);
+  }
+</script>
+
+</body>
+</html>
